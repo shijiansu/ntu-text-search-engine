@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+
+	<appenders>
+		<console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} [%p] - %m%n" />
+		</console>
+
+		<RollingFile name="RollingFileInfo" fileName="${sys:user.home}/ntu-msis-ir/info.log"
+			filePattern="${sys:user.home}/ntu-msis-ir/info-%d{yyyy-MM-dd}-%i.log">
+			<Filters>
+				<ThresholdFilter level="INFO" />
+			</Filters>
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss:SSS} [%p] - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="20 MB" />
+			</Policies>
+		</RollingFile>
+	</appenders>
+
+	<loggers>
+		<logger name="org.springframework" level="INFO">
+		</logger>
+		<logger name="org.hibernate" level="INFO">
+		</logger>
+		<root level="all">
+			<appender-ref ref="Console" />
+			<appender-ref ref="RollingFileInfo" />
+		</root>
+	</loggers>
+
+</configuration>
