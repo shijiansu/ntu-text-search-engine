@@ -111,13 +111,7 @@ The syntax of the command and the command parameters are as follows:
 -   **-Xms**: Minimum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
 -   **-Xmx**: Maximum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
 
-> PS: If you face issue \"Error: Could not create the Java Virtual Machine.
->
-> Error: A fatal exception has occurred. Program will exit.\", that means you do not have enough memory in your PC.
->
-> So you can set a smaller values to these parameters, such as "-Xms512m -Xmx512m", or even "-Xms256m -Xmx256m".
->
-> However it will slow down the process to start up the search engine.
+> PS: If you face issue \"Error: Could not create the Java Virtual Machine. Error: A fatal exception has occurred. Program will exit.\", that means you do not have enough memory in your PC. So you can set a smaller values to these parameters, such as "-Xms512m -Xmx512m", or even "-Xms256m -Xmx256m". However it will slow down the process to start up the search engine.
 
 ### 5.2.2. Mandatory Parameters
 
@@ -284,7 +278,7 @@ Here is a list for reference.
 | Libraries       | Description                                                                                   | Jars                                                                                                                |
 |-----------------|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Lucene          | To provide the main query function<br>for the most of operations of<br>the search engine.     | lucene-core-5.0.0.jar<br>lucene-queryparser-5.0.0.jar<br>lucene-analyzers-common-5.0.0.jar<br>lucene-join-5.0.0.jar |
-| Java EE         | To provide web browser user interface function.                                               | jstl-1.2.jar<br>jsp-api-2.2.jar<br>(only uses at compiling time)                                                    |
+| Java EE         | To provide web browser user<br>interface function.                                            | jstl-1.2.jar<br>jsp-api-2.2.jar<br>(only uses at compiling time)                                                    |
 | Jetty Libraries | To provide embedded web server<br>which can support the<br>web browser user interface.        | jetty-server-8.1.9.v20130131.jar<br>jetty-webapp-8.1.9.v20130131.jar<br>etty-jsp-8.1.9.v20130131.jar                |
 | Google          | To provide the JSON format file<br>parsing function to read the<br>JSON format dataset files. | json-simple-1.1.jar                                                                                                 |
 | Utility         | To provide the utility functions for<br>the search engine such as system logging.             | commons-io-2.4.jar<br>spring-core-4.1.6.RELEASE.jar<br>log4j-api-2.2.jar<br>log4j-core-2.2.jar                      |
