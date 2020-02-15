@@ -38,6 +38,7 @@ A Simple Text Search Engine
     -   Provide more details in the project in README.md
     -   More unit test
     -   Upgrade Java version to Java 13
+    -   Upgrade dependencies to fix security alarm
     -   Docker image for full independent environment
 
 # 2. Background of Assignment
