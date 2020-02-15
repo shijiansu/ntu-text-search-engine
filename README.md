@@ -35,6 +35,8 @@ A Simple Text Search Engine
     -   Re-structure the project
     -   Include shell commands example for the execution
     -   Update README.md to date
+    -   Provide more details in the project in README.md
+    -   More unit test
     -   Upgrade Java version to Java 13
     -   Docker image for full independent environment
 
