@@ -1,4 +1,9 @@
-![](https://img.shields.io/badge/language-java-blue) ![](https://img.shields.io/badge/technology-lucene,%20servlet,%20maven-blue) ![](https://img.shields.io/badge/version-1.0.0-green) ![](https://img.shields.io/badge/development%20year-2015-orange) ![](https://img.shields.io/badge/last%20modified-15%20Feb%202020-orange) ![](https://img.shields.io/badge/license-MIT-lightgrey)
+![](https://img.shields.io/badge/language-java-blue)
+![](https://img.shields.io/badge/technology-lucene,%20servlet,%20maven-blue)
+![](https://img.shields.io/badge/version-1.0.0-green)
+![](https://img.shields.io/badge/development%20year-2015-orange)
+![](https://img.shields.io/badge/last%20modified-15%20Feb%202020-orange)
+![](https://img.shields.io/badge/license-MIT-lightgrey)
 
 <h1>
 A Simple Text Search Engine
@@ -31,15 +36,15 @@ A Simple Text Search Engine
 
 # 1. Coming Enhancement
 
--   Planning at **15 Feb 2020**
-    -   Re-structure the project
-    -   Include shell commands example for the execution
-    -   Update README.md to date
-    -   Provide more details in the project in README.md
-    -   More unit test
-    -   Upgrade Java version to Java 13
-    -   Upgrade dependencies to fix security alarm
-    -   Docker image for full independent environment
+- Planning at **15 Feb 2020**
+  - Re-structure the project
+  - Include shell commands example for the execution
+  - Update README.md to date
+  - Provide more details in the project in README.md
+  - More unit test
+  - Upgrade Java version to Java 13
+  - Upgrade dependencies to fix security alarm
+  - Docker image for full independent environment
 
 # 2. Background of Assignment
 
@@ -59,15 +64,15 @@ The full compressed dataset size is 3.6GB.
 
 # 3. Application Version
 
--   **Version**: 1.0.0
--   **Development time**: 2015
+- **Version**: 1.0.0
+- **Development time**: 2015
 
 # 4. System Requirements
 
-1.  Windows 7 or above;
-2.  JDK 1.7.0.10 installed or above; please use 64bit JDK. 32bit JDK will fail.
-    -   You can use the following command to check the JDK version: `java -version`
-3.  If you run the full dataset for this assignment, it is required to allocate around 9 GB of your hard disk space.
+1. Windows 7 or above;
+2. JDK 1.7.0.10 installed or above; please use 64bit JDK. 32bit JDK will fail.
+  - You can use the following command to check the JDK version: `java -version`
+3. If you run the full dataset for this assignment, it is required to allocate around 9 GB of your hard disk space.
 
 # 5. How to Install and Start Up the Search Engine
 
@@ -81,14 +86,14 @@ Here is a step by step example of starting the search engine:
 
 ## 5.1. Step 1: Open Windows Command Prompt
 
--   Approach One: You may use Win Flag + r, then key in "cmd" (without the double quotes), then click OK to open Command Prompt.
--   Approach Two: You may use Win Start icon, then click "All Programs", then click "Accessories", then click "Command Prompt".
+- Approach One: You may use Win Flag + r, then key in "cmd" (without the double quotes), then click OK to open Command Prompt.
+- Approach Two: You may use Win Start icon, then click "All Programs", then click "Accessories", then click "Command Prompt".
 
 ## 5.2. Step 2: Run application
 
 Assume the folder with search engine and dataset as below:
 
-``` {.cmd}
+```cmd
 D:\ir
 |-ntu-text-search-engine.jar
 |-dataset
@@ -100,7 +105,7 @@ D:\ir
 
 A example of the command as following:
 
-``` {.cmd}
+```cmd
 java -Xms1024m -Xmx1024m -jar D:\ir\ntu-text-search-engine.jar \
     sourcereview="D:\ir\dataset\yelp_academic_dataset_review.json" \
     sourcebusiness="D:\ir\dataset\yelp_academic_dataset_business.json" \
@@ -111,27 +116,27 @@ The syntax of the command and the command parameters are as follows:
 
 ### 5.2.1. Optional JDK Parameters
 
--   **-Xms**: Minimum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
--   **-Xmx**: Maximum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
+- **-Xms**: Minimum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
+- **-Xmx**: Maximum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
 
 > PS: If you face issue \"Error: Could not create the Java Virtual Machine. Error: A fatal exception has occurred. Program will exit.\", that means you do not have enough memory in your PC. So you can set a smaller values to these parameters, such as "-Xms512m -Xmx512m", or even "-Xms256m -Xmx256m". However it will slow down the process to start up the search engine.
 
 ### 5.2.2. Mandatory Parameters
 
--   **sourcereview**: location of view dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_review.json`
--   **sourcerebusiness**: location of business dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_business.json`
--   **folderindex**: location of folder to keep the generated indexing files. In this example, the value is `D:\ir\index`.
+- **sourcereview**: location of view dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_review.json`
+- **sourcerebusiness**: location of business dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_business.json`
+- **folderindex**: location of folder to keep the generated indexing files. In this example, the value is `D:\ir\index`.
 
 ### 5.2.3. Another Optional Parameters
 
--   **iscreateindex**: whether to clean up the indexing folder and re-create the indexing files. Value is either true or false, default value is true.
--   **serverport**: web server port value. Value is Integer data type, default is `8585`. If the console shows `java.net.BindException: Address already in use: bind` then you need to provide other value for the web server port.
+- **iscreateindex**: whether to clean up the indexing folder and re-create the indexing files. Value is either true or false, default value is true.
+- **serverport**: web server port value. Value is Integer data type, default is `8585`. If the console shows `java.net.BindException: Address already in use: bind` then you need to provide other value for the web server port.
 
 # 6. An Example Log
 
 An example about the command and the startup logging:
 
-``` {.cmd}
+```cmd
 C:\Users\administrator>java -Xms1024m -Xmx1024m -jar d:\ir\ntu-text-search-engine.jar sourcereview="D:\ir\dataset\yelp_academic_dataset_review.json" sourcebusiness=
 D:\ir\dataset\yelp_academic_dataset_business.json" folderindex="D:\ir\index"
 2015-04-06 19:05:46,459 INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web
@@ -167,7 +172,7 @@ skipped the log for creating other index files
 
 The startup of the search engine takes around 27 minutes in the following experimental environment:
 
-``` {.cmd}
+```cmd
 Windows edition: Windows 7 Professional Service Pack 1
 System Processor: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
 System Installed memory (RAM): 8.00 GB
@@ -180,7 +185,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.71-b01, mixed mode)
 
 Below lines are the indicator to show that the search engine is started successfully:
 
-``` {.cmd}
+```cmd
 ***********************************************************
 *               <<APPLICATION STARTED>>                 *
 ... ...
@@ -189,7 +194,7 @@ Below lines are the indicator to show that the search engine is started successf
 
 After the search engine starts, the folder structure of the search engine, dataset and indexing files will be as below:
 
-``` {.cmd}
+```cmd
 D:\ir
 |-ntu-text-search-engine.jar
 |-dataset
@@ -224,8 +229,8 @@ By default, here are the URL you can use:
 
 in this page you can perform the search by clicking "Search" button, or you can click "Reset" link to clean the search result.
 
--   `http://localhost:8585/ntu-text-search-engine`, or
--   `http://localhost:8585/ntu-text-search-engine/index.jsp`
+- `http://localhost:8585/ntu-text-search-engine`, or
+- `http://localhost:8585/ntu-text-search-engine/index.jsp`
 
 ## 7.2. some testing data
 
@@ -249,7 +254,7 @@ URL for download and installation instructions: `https://maven.apache.org/downlo
 
 Use command to the source code folder and execute Maven command. Here is a example:
 
-``` {.cmd}
+```cmd
 D:\ir>cd D:\ir\source\ntu-text-search-engine
 D:\ir\source\ntu-text-search-engine>mvn clean package
 ... ... # downloading the dependency jar from Internet
@@ -292,7 +297,7 @@ Run at Eclipse on `MainTest.java`
 
 The change on the JSP can refresh without re-boot
 
--   search input page, default entry, same as index.jsp: <http://localhost:8585/ntu-text-search-engine>
--   search input page: <http://localhost:8585/ntu-text-search-engine/index.jsp>
--   page with test data: <http://localhost:8585/ntu-text-search-engine/index_test.jsp>
--   search result page: <http://localhost:8585/ntu-text-search-engine/search>
+- search input page, default entry, same as index.jsp: <http://localhost:8585/ntu-text-search-engine>
+- search input page: <http://localhost:8585/ntu-text-search-engine/index.jsp>
+- page with test data: <http://localhost:8585/ntu-text-search-engine/index_test.jsp>
+- search result page: <http://localhost:8585/ntu-text-search-engine/search>
