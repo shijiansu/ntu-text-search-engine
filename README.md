@@ -1,52 +1,18 @@
 ![](https://img.shields.io/badge/language-java-blue)
 ![](https://img.shields.io/badge/technology-lucene,%20servlet,%20maven-blue)
-![](https://img.shields.io/badge/version-1.0.0-green)
 ![](https://img.shields.io/badge/development%20year-2015-orange)
-![](https://img.shields.io/badge/last%20modified-15%20Feb%202020-orange)
+![](https://img.shields.io/badge/contributor-shijian%20su-purple)
 ![](https://img.shields.io/badge/license-MIT-lightgrey)
 
-<h1>
-A Simple Text Search Engine
-</h1>
-<!-- TOC -->
+![](https://img.shields.io/github/languages/top/shijiansu/ntu-text-search-engine)
+![](https://img.shields.io/github/languages/count/shijiansu/ntu-text-search-engine)
+![](https://img.shields.io/github/languages/code-size/shijiansu/ntu-text-search-engine)
+![](https://img.shields.io/github/repo-size/shijiansu/ntu-text-search-engine)
+![](https://img.shields.io/github/last-commit/shijiansu/ntu-text-search-engine?color=red)
 
-- [1. Coming Enhancement](#1-coming-enhancement)
-- [2. Background of Assignment](#2-background-of-assignment)
-- [3. Application Version](#3-application-version)
-- [4. System Requirements](#4-system-requirements)
-- [5. How to Install and Start Up the Search Engine](#5-how-to-install-and-start-up-the-search-engine)
-  - [5.1. Step 1: Open Windows Command Prompt](#51-step-1-open-windows-command-prompt)
-  - [5.2. Step 2: Run application](#52-step-2-run-application)
-    - [5.2.1. Optional JDK Parameters](#521-optional-jdk-parameters)
-    - [5.2.2. Mandatory Parameters](#522-mandatory-parameters)
-    - [5.2.3. Another Optional Parameters](#523-another-optional-parameters)
-- [6. An Example Log](#6-an-example-log)
-- [7. Access the Web User Interface](#7-access-the-web-user-interface)
-  - [7.1. search input page](#71-search-input-page)
-  - [7.2. some testing data](#72-some-testing-data)
-- [8. Logging](#8-logging)
-- [9. Compile and Re-Package the Application (Optional)](#9-compile-and-re-package-the-application-optional)
-  - [9.1. Step 1: Install Maven into your computer](#91-step-1-install-maven-into-your-computer)
-  - [9.2. Step 2: Execute Maven command](#92-step-2-execute-maven-command)
-  - [9.3. Step 3: Get the .jar](#93-step-3-get-the-jar)
-- [10. Appendix - List of Open Source Libraries](#10-appendix---list-of-open-source-libraries)
-- [11. How to Start Application at Eclipse](#11-how-to-start-application-at-eclipse)
+--------------------------------------------------------------------------------
 
-<!-- /TOC -->
-
-# 1. Coming Enhancement
-
-- Planning at **15 Feb 2020**
-  - Re-structure the project
-  - Include shell commands example for the execution
-  - Update README.md to date
-  - Provide more details in the project in README.md
-  - More unit test
-  - Upgrade Java version to Java 13
-  - Upgrade dependencies to fix security alarm
-  - Docker image for full independent environment
-
-# 2. Background of Assignment
+# Background
 
 It is an assignment to use Apache Lucene to build a simple text search engine for **Information Retrieval** course.
 
@@ -62,19 +28,19 @@ The full compressed dataset size is 3.6GB.
 
 ![](image/YelpDatasetFiles2020-02-15.png)
 
-# 3. Application Version
+# Application Version
 
 - **Version**: 1.0.0
 - **Development time**: 2015
 
-# 4. System Requirements
+# System Requirements
 
-1. Windows 7 or above;
-2. JDK 1.7.0.10 installed or above; please use 64bit JDK. 32bit JDK will fail.
+- Windows 7 or above;
+- JDK 1.7.0.10 installed or above; please use 64bit JDK. 32bit JDK will fail.
   - You can use the following command to check the JDK version: `java -version`
-3. If you run the full dataset for this assignment, it is required to allocate around 9 GB of your hard disk space.
+- If you run the full dataset for this assignment, it is required to allocate around 9 GB of your hard disk space.
 
-# 5. How to Install and Start Up the Search Engine
+# How to Install and Start Up the Search Engine
 
 The executable application is: `ntu-text-search-engine.jar`. The .jar file you can find it under `SourceCode` folder (as required by the assignment).
 
@@ -84,12 +50,12 @@ To start the search engine, you need to use command `java -jar`.
 
 Here is a step by step example of starting the search engine:
 
-## 5.1. Step 1: Open Windows Command Prompt
+## Step 1: Open Windows Command Prompt
 
 - Approach One: You may use Win Flag + r, then key in "cmd" (without the double quotes), then click OK to open Command Prompt.
 - Approach Two: You may use Win Start icon, then click "All Programs", then click "Accessories", then click "Command Prompt".
 
-## 5.2. Step 2: Run application
+## Step 2: Run application
 
 Assume the folder with search engine and dataset as below:
 
@@ -114,25 +80,25 @@ java -Xms1024m -Xmx1024m -jar D:\ir\ntu-text-search-engine.jar \
 
 The syntax of the command and the command parameters are as follows:
 
-### 5.2.1. Optional JDK Parameters
+### Optional JDK Parameters
 
 - **-Xms**: Minimum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
 - **-Xmx**: Maximum JDK memory located in this search engine during the run time. In this example, the value is 1024m.
 
 > PS: If you face issue \"Error: Could not create the Java Virtual Machine. Error: A fatal exception has occurred. Program will exit.\", that means you do not have enough memory in your PC. So you can set a smaller values to these parameters, such as "-Xms512m -Xmx512m", or even "-Xms256m -Xmx256m". However it will slow down the process to start up the search engine.
 
-### 5.2.2. Mandatory Parameters
+### Mandatory Parameters
 
 - **sourcereview**: location of view dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_review.json`
 - **sourcerebusiness**: location of business dataset. In this example, the value is `D:\ir\dataset\yelp_academic_dataset_business.json`
 - **folderindex**: location of folder to keep the generated indexing files. In this example, the value is `D:\ir\index`.
 
-### 5.2.3. Another Optional Parameters
+### Another Optional Parameters
 
 - **iscreateindex**: whether to clean up the indexing folder and re-create the indexing files. Value is either true or false, default value is true.
 - **serverport**: web server port value. Value is Integer data type, default is `8585`. If the console shows `java.net.BindException: Address already in use: bind` then you need to provide other value for the web server port.
 
-# 6. An Example Log
+# An Example Log
 
 An example about the command and the startup logging:
 
@@ -221,36 +187,36 @@ D:\ir
     |-index_review_caseY_stopY_stemY
 ```
 
-# 7. Access the Web User Interface
+# Access the Web User Interface
 
 By default, here are the URL you can use:
 
-## 7.1. search input page
+## search input page
 
 in this page you can perform the search by clicking "Search" button, or you can click "Reset" link to clean the search result.
 
 - `http://localhost:8585/ntu-text-search-engine`, or
 - `http://localhost:8585/ntu-text-search-engine/index.jsp`
 
-## 7.2. some testing data
+## some testing data
 
 `http://localhost:8585/ntu-text-search-engine/index_test.jsp`
 
-# 8. Logging
+# Logging
 
 Log file is at `%user_home%/ntu-text-search-engine/info.log`
 
-# 9. Compile and Re-Package the Application (Optional)
+# Compile and Re-Package the Application (Optional)
 
 Java is a cross operation system language, so you can use ntu-text-search-engine.jar at Windows platform or Linux platform if you installed the JDK.
 
 However, if you want to compile and re-package the application form the source code, you need to follow the below steps.
 
-## 9.1. Step 1: Install Maven into your computer
+## Step 1: Install Maven into your computer
 
 URL for download and installation instructions: `https://maven.apache.org/download.cgi`
 
-## 9.2. Step 2: Execute Maven command
+## Step 2: Execute Maven command
 
 Use command to the source code folder and execute Maven command. Here is a example:
 
@@ -267,7 +233,7 @@ D:\ir\source\ntu-text-search-engine>mvn clean package
 [INFO] ------------------------------------------------------------------------
 ```
 
-## 9.3. Step 3: Get the .jar
+## Step 3: Get the .jar
 
 Find your package Java jar, it is under the target folder of the source code location.
 
@@ -275,7 +241,7 @@ Assume the source code location is: `D:\ir>cd D:\ir\source\ntu-text-search-engin
 
 So the location of the jar is: `F:\ir\source\ntu-text-search-engine\target\ntu-text-search-engine.jar`
 
-# 10. Appendix - List of Open Source Libraries
+# Appendix - List of Open Source Libraries
 
 By right all the dependency libraries are downloaded by Maven automatically.
 
@@ -291,7 +257,7 @@ Here is a list for reference.
 | Google          | To provide the JSON format file<br>parsing function to read the<br>JSON format dataset files. | json-simple-1.1.jar                                                                                                 |
 | Utility         | To provide the utility functions for<br>the search engine such as system logging.             | commons-io-2.4.jar<br>spring-core-4.1.6.RELEASE.jar<br>log4j-api-2.2.jar<br>log4j-core-2.2.jar                      |
 
-# 11. How to Start Application at Eclipse
+# How to Start Application at Eclipse
 
 Run at Eclipse on `MainTest.java`
 
@@ -301,3 +267,15 @@ The change on the JSP can refresh without re-boot
 - search input page: <http://localhost:8585/ntu-text-search-engine/index.jsp>
 - page with test data: <http://localhost:8585/ntu-text-search-engine/index_test.jsp>
 - search result page: <http://localhost:8585/ntu-text-search-engine/search>
+
+# Coming Enhancement
+
+- Planning at 20200215
+  - Re-structure the project
+  - Include shell commands example for the execution
+  - Update README.md to date
+  - Provide more details in the project in README.md
+  - More unit test
+  - Upgrade Java version to Java 13
+  - Upgrade dependencies to fix security alarm
+  - Docker image for full independent environment
