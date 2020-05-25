@@ -10,6 +10,8 @@
 ![](https://img.shields.io/github/repo-size/shijiansu/ntu-text-search-engine)
 ![](https://img.shields.io/github/last-commit/shijiansu/ntu-text-search-engine?color=red)
 
+![](https://github.com/shijiansu/ntu-text-search-engine/workflows/ci%20build/badge.svg)
+
 --------------------------------------------------------------------------------
 
 # Background
