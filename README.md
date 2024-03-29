@@ -1,39 +1,27 @@
-![](https://img.shields.io/badge/language-java-blue)
-![](https://img.shields.io/badge/technology-lucene,%20servlet,%20maven-blue)
 ![](https://img.shields.io/badge/development%20year-2015-orange)
-![](https://img.shields.io/badge/contributor-shijian%20su-purple)
-![](https://img.shields.io/badge/license-MIT-lightgrey)
 
-![](https://img.shields.io/github/languages/top/shijiansu/ntu-text-search-engine)
-![](https://img.shields.io/github/languages/count/shijiansu/ntu-text-search-engine)
-![](https://img.shields.io/github/languages/code-size/shijiansu/ntu-text-search-engine)
-![](https://img.shields.io/github/repo-size/shijiansu/ntu-text-search-engine)
-![](https://img.shields.io/github/last-commit/shijiansu/ntu-text-search-engine?color=red)
-
---------------------------------------------------------------------------------
-
-# Background
+# Introudction
 
 It is an assignment to use Apache Lucene to build a simple text search engine for **Information Retrieval** course.
 
-![](image/YelpDatasetIntroduction2020-02-15.png)
+![](images/YelpDatasetIntroduction2020-02-15.png)
 
 The dataset is from [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge)
 
 The full compressed dataset size is 3.6GB.
 
-![](image/YelpDataset2020-02-15.png)
+![](images/YelpDataset2020-02-15.png)
 
 `business.json` and `review.json` will be used
 
-![](image/YelpDatasetFiles2020-02-15.png)
+![](images/YelpDatasetFiles2020-02-15.png)
 
 # Application Version
 
 - **Version**: 1.0.0
 - **Development time**: 2015
 
-# System Requirements
+# Application Requirements
 
 - Windows 7 or above;
 - JDK 1.7.0.10 installed or above; please use 64bit JDK. 32bit JDK will fail.
@@ -57,7 +45,7 @@ Here is a step by step example of starting the search engine:
 
 ## Step 2: Run application
 
-Assume the folder with search engine and dataset as below:
+Assume the folder with search engine and dataset as below,
 
 ```cmd
 D:\ir
@@ -189,16 +177,16 @@ D:\ir
 
 # Access the Web User Interface
 
-By default, here are the URL you can use:
+By default, here are the URL you can use,
 
-## search input page
+## Search input page
 
-in this page you can perform the search by clicking "Search" button, or you can click "Reset" link to clean the search result.
+In this page you can perform the search by clicking "Search" button, or you can click "Reset" link to clean the search result.
 
 - `http://localhost:8585/ntu-text-search-engine`, or
 - `http://localhost:8585/ntu-text-search-engine/index.jsp`
 
-## some testing data
+## Testing data
 
 `http://localhost:8585/ntu-text-search-engine/index_test.jsp`
 
@@ -268,7 +256,7 @@ The change on the JSP can refresh without re-boot
 - page with test data: <http://localhost:8585/ntu-text-search-engine/index_test.jsp>
 - search result page: <http://localhost:8585/ntu-text-search-engine/search>
 
-# Coming Enhancement
+# Enhancement Plan
 
 - Planning at 20200215
   - Re-structure the project
