@@ -4,22 +4,38 @@
 
 It is an assignment to use Apache Lucene to build a simple text search engine for **Information Retrieval** course.
 
-![](images/YelpDatasetIntroduction2020-02-15.png)
+Below Some Screenshots with Later Version,
 
-The dataset is from [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge)
-
-The full compressed dataset size is 3.6GB.
-
-![](images/YelpDataset2020-02-15.png)
-
-`business.json` and `review.json` will be used
-
-![](images/YelpDatasetFiles2020-02-15.png)
+> ![](images/YelpDatasetIntroduction2020-02-15.png)
+>
+> The dataset is from [Yelp Dataset Challenge](http://www.yelp.com/dataset_challenge)
+>
+> The full compressed dataset size is 3.6GB.
+>
+> ![](images/YelpDataset2020-02-15.png)
+>
+> `business.json` and `review.json` will be used
+>
+> ![](images/YelpDatasetFiles2020-02-15.png)
 
 # Application Version
 
 - **Version**: 1.0.0
 - **Development time**: 2015
+
+# Dataset
+
+## Source Files
+
+- Uploaded to Dropbox
+- Also find here (different version, and not verified with this project code): <https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset/data>
+
+## Full Volumne
+
+| JSON                                | Record    | Size   |
+| ----------------------------------- | --------- | ------ |
+| yelp_academic_dataset_business.json | 61,184    | 55.4MB |
+| yelp_academic_dataset_review.json   | 1,569,264 | 1.43GB |
 
 # Application Requirements
 
@@ -30,7 +46,7 @@ The full compressed dataset size is 3.6GB.
 
 # How to Install and Start Up the Search Engine
 
-The executable application is: `ntu-text-search-engine.jar`. The .jar file you can find it under `SourceCode` folder (as required by the assignment).
+The executable application is: `ntu-text-search-engine.jar`. The .jar file you can find it under `Executable` folder (as required by the assignment).
 
 There is no need to compile or re-package the `.jar` from the source code.
 
